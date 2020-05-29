@@ -40,8 +40,7 @@ class Monthread(threading.Thread):
                 time.sleep(1)
 
             self.current_state  = GPIO.input(PIR_SENSOR)
-            #if self.previous_state == 0  and self.current_state == 1:
-            if self.current_state == 1:
+            if self.previous_state == 0  and self.current_state == 1:
                 motion = True
                 self.previous_state  = 1
                 print("motion")
